@@ -6,11 +6,43 @@
         <title> Bate-papo </title>
         <link rel="stylesheet" type="text/css" href="reset.css">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     </head>
-
+    
     <body>
         <header>
+            <div>
+            <img src="./logo 1.png">
+            </div>
+            <div>
+            <ion-icon class="people" onclick="participantesativos()" name="people"></ion-icon>
+            </div>
         </header>
+        <div class="entrouousaiu msg">
+
+        </div>
+
+        <div class="reservadamente msg">
+
+        </div>
+
+        <div class="normal msg">
+
+        </div>
+
+        <aside class="oculto" onclick="participantesativos()" >
+            paulina
+        </aside>
+        <footer>
+            <input type="text" placeholder="Escreva Aqui...">
+            <ion-icon class="icone" name="paper-plane-outline"></ion-icon>
+        </footer>
+
+    
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="script.js"></script>
     </body>
     
