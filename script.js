@@ -74,6 +74,34 @@ function rolarprofim(){
 aparece.scrollIntoView();  
 }
 
+function adicionamensagem(){
+    const novamsg=document.querySelector('input').value;
+    const novamsgm={
+        
+            from: nome,
+            to: "Todos ",
+            text: novamsg,
+            type: "message" // ou "private_message" para o bônus
+        
+    }
+    
+    const postnovamsg= axios.post('https://mock-api.driven.com.br/api/v6/uol/messages',novamsgm);
+    console.log("enviouanovamsg");
+    postnovamsg.then(promessadonovopost());
+    postnovamsg.catch(errononovopost());
+}
+
+function promessadonovopost(){
+    console.log(' resposta do servidor chegou!!!!!!');
+    console.log(resposta);
+    buscarnoserv();
+}
+
+function errononovopost(){
+    console.log('Deu ruim!!! A mensagem não foi salva!!!!');
+    console.log(erro);
+}
+
 function promessarespossta(resposta){
 console.log(resposta.data);
 console.log("podeentrraar");
