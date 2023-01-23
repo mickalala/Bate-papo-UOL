@@ -100,6 +100,7 @@ function promessadonovopost(){
 function errononovopost(){
     console.log('Deu ruim!!! A mensagem não foi salva!!!!');
     console.log(erro);
+    window.location.reload();
 }
 
 function promessarespossta(resposta){
