@@ -41,7 +41,7 @@ function renderizamsg(mensage){
     for(let index = 0; index < mensage.length; index++){
         const tipo=(mensage[index].type)
         if(tipo==="status"){
-       lista.innerHTML= lista.innerHTML +  `<div class="entrouousaiu msg">
+       lista.innerHTML= lista.innerHTML +  `<div data-test="message" class="entrouousaiu msg">
          <span class="hora">(${mensage[index].time}) </span>
          <span class="name"> ${mensage[index].from}</span>
          <span class="msgm">  ${mensage[index].text} </span>
@@ -49,7 +49,7 @@ function renderizamsg(mensage){
     `
    
     }else if(tipo==="message"){
-        lista.innerHTML= lista.innerHTML +  `<div class="normal msg">
+        lista.innerHTML= lista.innerHTML +  `<div data-test="message"class="normal msg">
          <span class="hora">(${mensage[index].time}) </span>
          <span class="name"> ${mensage[index].from}</span>
          <span class="to">para ${mensage[index].to}:</span>
@@ -58,7 +58,7 @@ function renderizamsg(mensage){
     }else{
         const destino=(mensage[index].to)
         if(destino===nome){
-        lista.innerHTML= lista.innerHTML +  `<div class="reservadamente msg">
+        lista.innerHTML= lista.innerHTML +  `<div data-test="message" class="reservadamente msg">
         <span class="hora">(${mensage[index].time}) </span>
         <span class="name"> ${mensage[index].from}</span>
         <span class="to">para ${mensage[index].to}:</span>
