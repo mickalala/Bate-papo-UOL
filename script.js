@@ -21,6 +21,7 @@ setInterval(online, 5000)
 function buscarnoserv(){
     const busca=axios.get('https://mock-api.driven.com.br/api/v6/uol/messages')
     busca.then(respostachegou)
+
 }
 
 function respostachegou(respostaa){
@@ -45,7 +46,9 @@ function renderizamsg(mensage){
          <span class="name"> ${mensage[index].from}</span>
          <span class="msgm">  ${mensage[index].text} </span>
          </div>
-    `}else if(tipo==="message"){
+    `
+   
+    }else if(tipo==="message"){
         lista.innerHTML= lista.innerHTML +  `<div class="normal msg">
          <span class="hora">(${mensage[index].time}) </span>
          <span class="name"> ${mensage[index].from}</span>
@@ -63,10 +66,13 @@ function renderizamsg(mensage){
         </div>`}
     }
 }
-
+  rolarprofim();
 }
 
-
+function rolarprofim(){
+  const aparece= document.querySelector('.chat div:last-child')
+aparece.scrollIntoView();  
+}
 
 function promessarespossta(resposta){
 console.log(resposta.data);
@@ -74,6 +80,7 @@ console.log("podeentrraar");
 
 }
 setInterval(buscarnoserv,300)
+
 
 function tratarErro(erro) {
      
